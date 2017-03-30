@@ -40,24 +40,25 @@ class FullScreenPhotoViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let post = post {
-            
+        
             view.addSubview(scrollView)
         
-            scrollView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
             scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             
             scrollView.contentSize = imageView.bounds.size
             scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            scrollView.contentOffset = CGPoint(x: 1000, y: 450)
+
             scrollView.indicatorStyle = .white
             scrollView.minimumZoomScale = 0.3
             scrollView.maximumZoomScale = 3.0
+            scrollView.zoomScale = 1.0
+   
             scrollView.delegate = self;
             scrollView.addSubview(imageView)
-        }
     }
-    
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
