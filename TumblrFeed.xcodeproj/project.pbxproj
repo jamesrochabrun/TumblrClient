@@ -20,6 +20,7 @@
 		7B8CFBA91E8D83A8006FCCAB /* BlogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFBA81E8D83A8006FCCAB /* BlogService.swift */; };
 		7B8CFBAB1E8D8F52006FCCAB /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFBAA1E8D8F52006FCCAB /* PhotoDetailsViewController.swift */; };
 		7B8CFBAD1E8DB0A3006FCCAB /* FullScreenPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFBAC1E8DB0A3006FCCAB /* FullScreenPhotoViewController.swift */; };
+		7B8CFBAF1E8DC932006FCCAB /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFBAE1E8DC932006FCCAB /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7B8CFBA81E8D83A8006FCCAB /* BlogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogService.swift; sourceTree = "<group>"; };
 		7B8CFBAA1E8D8F52006FCCAB /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		7B8CFBAC1E8DB0A3006FCCAB /* FullScreenPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewController.swift; sourceTree = "<group>"; };
+		7B8CFBAE1E8DC932006FCCAB /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8CFB9C1E8D8123006FCCAB /* PhotoCell.swift */,
+				7B8CFBAE1E8DC932006FCCAB /* HeaderCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				7B8CFB9D1E8D8123006FCCAB /* PhotoCell.swift in Sources */,
 				7B8CFBAD1E8DB0A3006FCCAB /* FullScreenPhotoViewController.swift in Sources */,
 				7B8CFBAB1E8D8F52006FCCAB /* PhotoDetailsViewController.swift in Sources */,
+				7B8CFBAF1E8DC932006FCCAB /* HeaderCell.swift in Sources */,
 				7B8CFB8B1E8D5CC7006FCCAB /* AppDelegate.swift in Sources */,
 				7B8CFBA91E8D83A8006FCCAB /* BlogService.swift in Sources */,
 				7B8CFBA41E8D832B006FCCAB /* Post.swift in Sources */,
