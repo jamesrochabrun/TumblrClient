@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tWN-6y-YBL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="TumblrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="253" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JFT-hn-gTg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="240" id="0mh-84-0jy" customClass="PhotoCell" customModule="TumblrFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mh-84-0jy" id="YvK-Zq-74N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-RC-CpP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="dvT-RC-CpP" secondAttribute="trailing" id="S75-J7-Jkk"/>
+                                                <constraint firstAttribute="bottom" secondItem="dvT-RC-CpP" secondAttribute="bottom" id="a9s-KR-wRY"/>
+                                                <constraint firstItem="dvT-RC-CpP" firstAttribute="top" secondItem="YvK-Zq-74N" secondAttribute="top" id="gzX-7R-PfC"/>
+                                                <constraint firstItem="dvT-RC-CpP" firstAttribute="leading" secondItem="YvK-Zq-74N" secondAttribute="leading" id="k2h-1w-8Gc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="dvT-RC-CpP" id="M1L-wA-TPM"/>
+                                            <segue destination="oga-2f-G1O" kind="show" identifier="detailSegue" id="cDj-O5-kv7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TFK-kj-plC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uv7-pZ-fWF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JFT-hn-gTg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8yo-IE-Pak"/>
+                            <constraint firstItem="JFT-hn-gTg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ga3-q9-fIC"/>
+                            <constraint firstAttribute="trailing" secondItem="JFT-hn-gTg" secondAttribute="trailing" id="Hyc-ZZ-IJq"/>
+                            <constraint firstItem="JFT-hn-gTg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZcN-1j-GOf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hp5-Bs-jEC"/>
+                    <connections>
+                        <outlet property="tableView" destination="JFT-hn-gTg" id="Ra4-jM-VOT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975.20000000000005" y="37.331334332833585"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="JJo-jW-Kh3">
+            <objects>
+                <viewController id="oga-2f-G1O" customClass="PhotoDetailsViewController" customModule="TumblrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="liZ-K7-QbO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhE-lb-dBs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Szk-Hx-wB0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-tT-sJB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="338"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="leading" secondItem="Szk-Hx-wB0" secondAttribute="leading" id="BxD-ge-K99"/>
+                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="top" secondItem="liZ-K7-QbO" secondAttribute="bottom" id="u9N-vW-WUP"/>
+                            <constraint firstItem="hhE-lb-dBs" firstAttribute="top" secondItem="Mdt-tT-sJB" secondAttribute="bottom" constant="265" id="vGh-VG-utm"/>
+                            <constraint firstAttribute="trailing" secondItem="Mdt-tT-sJB" secondAttribute="trailing" id="wDD-yS-93Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PUb-aw-zTE"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Mdt-tT-sJB" id="tMU-TX-dc3"/>
+                        <outlet property="photoImageview" destination="Mdt-tT-sJB" id="W1r-VO-4Ro"/>
+                        <segue destination="haH-Ug-CeI" kind="presentation" identifier="zoomSegue" id="l0F-l7-3pV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZU1-cV-eHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="36.431784107946029"/>
+        </scene>
+        <!--Full Screen Photo View Controller-->
+        <scene sceneID="1e8-mV-hHg">
+            <objects>
+                <viewController id="hNH-2L-ZeR" customClass="FullScreenPhotoViewController" customModule="TumblrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1D5-UF-AD9"/>
+                        <viewControllerLayoutGuide type="bottom" id="FgH-Tq-ln2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cFG-5I-TzL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S5Q-hv-eXy">
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss" id="qqa-Ff-UX3">
+                            <connections>
+                                <action selector="dismissView:" destination="hNH-2L-ZeR" id="VaW-PK-RHs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6V0-mo-hil" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3504.8000000000002" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eAb-2h-6bs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWN-6y-YBL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UJT-fX-Vdl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bu2-En-lKh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaK-vD-xSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ev5-po-aAm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="haH-Ug-CeI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Unj-Fq-4wt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hNH-2L-ZeR" kind="relationship" relationship="rootViewController" id="a9P-kW-FWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRZ-bB-hWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="36"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
