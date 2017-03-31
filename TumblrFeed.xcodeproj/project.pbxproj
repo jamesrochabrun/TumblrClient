@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		65AFCEA5360D1B33B6F31E61 /* Pods_TumblrFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FF99EE4919485B970CAA33 /* Pods_TumblrFeed.framework */; };
+		7B35D46E1E8F066700C86685 /* Blurrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35D46D1E8F066700C86685 /* Blurrable.swift */; };
+		7B35D4701E8F067100C86685 /* Opaqueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35D46F1E8F067100C86685 /* Opaqueable.swift */; };
+		7B35D4721E8F1F1700C86685 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35D4711E8F1F1700C86685 /* Extensions.swift */; };
 		7B8CFB8B1E8D5CC7006FCCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFB8A1E8D5CC7006FCCAB /* AppDelegate.swift */; };
 		7B8CFB8D1E8D5CC7006FCCAB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CFB8C1E8D5CC7006FCCAB /* PhotosViewController.swift */; };
 		7B8CFB901E8D5CC7006FCCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8CFB8E1E8D5CC7006FCCAB /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		57C92330D17455CBA50C0580 /* Pods-TumblrFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrFeed/Pods-TumblrFeed.release.xcconfig"; sourceTree = "<group>"; };
 		5904E3D58152860985C7AAEB /* Pods-TumblrFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrFeed/Pods-TumblrFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		68FF99EE4919485B970CAA33 /* Pods_TumblrFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumblrFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B35D46D1E8F066700C86685 /* Blurrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blurrable.swift; sourceTree = "<group>"; };
+		7B35D46F1E8F067100C86685 /* Opaqueable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opaqueable.swift; sourceTree = "<group>"; };
+		7B35D4711E8F1F1700C86685 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7B8CFB871E8D5CC7006FCCAB /* TumblrFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8CFB8A1E8D5CC7006FCCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TumblrFeed/AppDelegate.swift; sourceTree = "<group>"; };
 		7B8CFB8C1E8D5CC7006FCCAB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +71,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7B35D46C1E8F065200C86685 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7B35D46D1E8F066700C86685 /* Blurrable.swift */,
+				7B35D46F1E8F067100C86685 /* Opaqueable.swift */,
+				7B35D4711E8F1F1700C86685 /* Extensions.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		7B8CFB7E1E8D5CC7006FCCAB = {
 			isa = PBXGroup;
 			children = (
 				7B8CFB8A1E8D5CC7006FCCAB /* AppDelegate.swift */,
+				7B35D46C1E8F065200C86685 /* Protocols */,
 				7B8CFB891E8D5CC7006FCCAB /* TumblrFeed */,
 				7B8CFB881E8D5CC7006FCCAB /* Products */,
 				3C4058EC8694A96B766E46E7 /* Pods */,
@@ -274,8 +291,11 @@
 				7B8CFB9D1E8D8123006FCCAB /* PhotoCell.swift in Sources */,
 				7B8CFBAD1E8DB0A3006FCCAB /* FullScreenPhotoViewController.swift in Sources */,
 				7B8CFBAB1E8D8F52006FCCAB /* PhotoDetailsViewController.swift in Sources */,
+				7B35D4701E8F067100C86685 /* Opaqueable.swift in Sources */,
 				7B8CFBAF1E8DC932006FCCAB /* HeaderCell.swift in Sources */,
+				7B35D4721E8F1F1700C86685 /* Extensions.swift in Sources */,
 				7B8CFB8B1E8D5CC7006FCCAB /* AppDelegate.swift in Sources */,
+				7B35D46E1E8F066700C86685 /* Blurrable.swift in Sources */,
 				7B8CFBA91E8D83A8006FCCAB /* BlogService.swift in Sources */,
 				7B8CFBA41E8D832B006FCCAB /* Post.swift in Sources */,
 			);

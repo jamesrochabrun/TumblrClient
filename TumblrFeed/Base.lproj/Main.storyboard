@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,22 +86,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-tT-sJB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="338"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-tT-sJB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="leg-Y1-ORm">
+                                <rect key="frame" x="16" y="94" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="20B-YB-u8Z"/>
+                                    <constraint firstAttribute="height" constant="80" id="jpz-Nf-fLp"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dem-4Z-one">
+                                <rect key="frame" x="104" y="156" width="255" height="491"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k13-vQ-Nvq">
+                                <rect key="frame" x="104" y="124" width="255" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="leading" secondItem="Szk-Hx-wB0" secondAttribute="leading" id="BxD-ge-K99"/>
-                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="top" secondItem="liZ-K7-QbO" secondAttribute="bottom" id="u9N-vW-WUP"/>
-                            <constraint firstItem="hhE-lb-dBs" firstAttribute="top" secondItem="Mdt-tT-sJB" secondAttribute="bottom" constant="265" id="vGh-VG-utm"/>
-                            <constraint firstAttribute="trailing" secondItem="Mdt-tT-sJB" secondAttribute="trailing" id="wDD-yS-93Z"/>
+                            <constraint firstItem="k13-vQ-Nvq" firstAttribute="trailing" secondItem="dem-4Z-one" secondAttribute="trailing" id="AOO-uL-49f"/>
+                            <constraint firstItem="dem-4Z-one" firstAttribute="top" secondItem="k13-vQ-Nvq" secondAttribute="bottom" constant="12" id="Bx1-zK-aRU"/>
+                            <constraint firstItem="k13-vQ-Nvq" firstAttribute="leading" secondItem="dem-4Z-one" secondAttribute="leading" id="GSX-FH-Fak"/>
+                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="top" secondItem="liZ-K7-QbO" secondAttribute="bottom" id="aeK-xp-jLp"/>
+                            <constraint firstItem="k13-vQ-Nvq" firstAttribute="centerY" secondItem="leg-Y1-ORm" secondAttribute="centerY" id="are-9a-nEQ"/>
+                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="leading" secondItem="Szk-Hx-wB0" secondAttribute="leading" id="cWZ-cg-lxY"/>
+                            <constraint firstAttribute="bottom" secondItem="dem-4Z-one" secondAttribute="bottom" constant="20" symbolic="YES" id="eSO-9n-DEo"/>
+                            <constraint firstItem="leg-Y1-ORm" firstAttribute="top" secondItem="liZ-K7-QbO" secondAttribute="bottom" constant="30" id="hBz-6T-XRV"/>
+                            <constraint firstItem="dem-4Z-one" firstAttribute="trailing" secondItem="Szk-Hx-wB0" secondAttribute="trailingMargin" id="hOQ-lU-Hb7"/>
+                            <constraint firstItem="Mdt-tT-sJB" firstAttribute="bottom" secondItem="hhE-lb-dBs" secondAttribute="top" id="iTG-Nu-Bfe"/>
+                            <constraint firstAttribute="trailing" secondItem="Mdt-tT-sJB" secondAttribute="trailing" id="kC3-Tu-jJB"/>
+                            <constraint firstItem="leg-Y1-ORm" firstAttribute="leading" secondItem="Szk-Hx-wB0" secondAttribute="leadingMargin" id="kcO-c1-hqk"/>
+                            <constraint firstItem="dem-4Z-one" firstAttribute="leading" secondItem="leg-Y1-ORm" secondAttribute="trailing" constant="8" symbolic="YES" id="sU8-1U-JY9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PUb-aw-zTE"/>
                     <connections>
-                        <outlet property="photoImageView" destination="Mdt-tT-sJB" id="tMU-TX-dc3"/>
-                        <outlet property="photoImageview" destination="Mdt-tT-sJB" id="W1r-VO-4Ro"/>
+                        <outlet property="captionText" destination="dem-4Z-one" id="2gY-At-wl3"/>
+                        <outlet property="dateLabel" destination="k13-vQ-Nvq" id="LA0-Rt-4Oe"/>
+                        <outlet property="photoImageview" destination="Mdt-tT-sJB" id="zzu-ie-jMK"/>
+                        <outlet property="thumbnailImageview" destination="leg-Y1-ORm" id="XO2-Z6-lWf"/>
                         <segue destination="haH-Ug-CeI" kind="presentation" identifier="zoomSegue" id="l0F-l7-3pV"/>
                     </connections>
                 </viewController>
@@ -138,9 +170,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWN-6y-YBL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UJT-fX-Vdl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UJT-fX-Vdl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.10980392160000001" green="0.63921568630000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -156,9 +189,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="haH-Ug-CeI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Unj-Fq-4wt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Unj-Fq-4wt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.10980392160000001" green="0.63921568630000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

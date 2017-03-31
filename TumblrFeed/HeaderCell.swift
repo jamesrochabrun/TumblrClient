@@ -38,7 +38,7 @@ class HederView: UITableViewCell {
     var post: Post? {
         didSet {
             if let post = post {
-                self.dateLabel.text = post.date
+                self.dateLabel.text = post.date.formatTimeStamp()
             }
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 
 struct Post {
     
-    let date: String
+    let date: Double
     let summary: String
     let caption: String
     let image: PostImage
@@ -20,7 +20,7 @@ struct Post {
 extension Post {
     
     struct Key {
-        static let dateString: String = "date"
+        static let timestamp: String = "timestamp"
         static let summmaryString: String = "summary"
         static let captionString: String = "caption"
         static let photosArray: String = "photos"
@@ -32,7 +32,7 @@ extension Post {
     
     init?(json: [String: AnyObject]) {
         
-        guard let dateString = json[Key.dateString] as? String,
+        guard let dateString = json[Key.timestamp] as? Double,
             let summaryString = json[Key.summmaryString] as? String,
             let captionString = json[Key.captionString] as? String,
             let photosArray = json[Key.photosArray] as? [[String: AnyObject]],
