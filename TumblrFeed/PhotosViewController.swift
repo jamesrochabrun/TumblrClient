@@ -13,7 +13,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     lazy var refreshControl: UIRefreshControl = {
         let rf = UIRefreshControl()
-        rf.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        rf.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
         return rf
     }()
     
@@ -91,7 +91,6 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
             header?.blog = blog
         }
         return header
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,6 +103,8 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    
 }
 
 

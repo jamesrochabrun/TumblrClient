@@ -19,9 +19,11 @@ class PhotoCell: UITableViewCell {
         Alamofire.request(post.image.imageOriginalURL).response { [weak self] response in
             if let data = response.data {
                 DispatchQueue.main.async {
-                    self?.photoImageView.image = UIImage(data: data)
+                self?.photoImageView.image = UIImage(data: data)
                 }
             }
         }
     }
+    
+    
 }

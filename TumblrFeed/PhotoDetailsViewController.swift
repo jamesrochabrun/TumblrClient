@@ -33,7 +33,9 @@ class PhotoDetailsViewController: UIViewController {
         super.viewDidLoad()
         photoImageView.isUserInteractionEnabled = true
         photoImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+
     }
+
     
     func  handleTap() {
         performSegue(withIdentifier: zoomSegue, sender: nil)
