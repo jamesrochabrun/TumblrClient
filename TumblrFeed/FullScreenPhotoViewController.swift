@@ -14,8 +14,8 @@ class FullScreenPhotoViewController: UIViewController, UIScrollViewDelegate {
     var post: Post? {
         didSet {
             if let post = post {
-                self.postImageWidth = post.image.imageWidth
-                self.postImageHeight = post.image.imageHeight
+//                self.postImageWidth = post.image.imageWidth
+//                self.postImageHeight = post.image.imageHeight
                 Alamofire.request(post.image.imageOriginalURL).response { [weak self] response in
                     if let data = response.data {
                         DispatchQueue.main.async {
@@ -28,8 +28,8 @@ class FullScreenPhotoViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var postImageWidth: CGFloat = 0
-    var postImageHeight: CGFloat = 0
+    var postImageWidth: CGFloat = 1280
+    var postImageHeight: CGFloat = 854
     
     lazy var scrollView: UIScrollView = {
         let sv = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
@@ -38,14 +38,13 @@ class FullScreenPhotoViewController: UIViewController, UIScrollViewDelegate {
     
     lazy var imageView: UIImageView = {
         let iv = UIImageView(frame: CGRect(x: 0, y: 0, width: self.postImageWidth, height: self.postImageHeight))
-        iv.backgroundColor = .red
         return iv
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.backgroundColor = UIColor.black
+        scrollView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         let centerY: CGFloat = (self.postImageHeight - self.scrollView.frame.height ) / 2
